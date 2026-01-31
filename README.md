@@ -6,6 +6,8 @@ Two-pass alpha extraction tool for creating transparent PNG images.
 
 ---
 
+[![Fruit Bowl Composite](examples/fruit_bowl_composite.jpg)](examples/04_fruit_bowl_transparent.png)
+
 ## Usage / 사용법
 
 ```bash
