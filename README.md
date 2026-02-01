@@ -1,3 +1,6 @@
+[![Fruit Bowl Composite](examples/fruit_bowl_composite.jpg)](examples/04_fruit_bowl_transparent.png)
+
+
 # pngalpha
 
 Two-pass alpha extraction tool for creating transparent PNG images.
@@ -7,6 +10,9 @@ Two-pass alpha extraction tool for creating transparent PNG images.
 ---
 
 ## Usage / 사용법 / 使い方
+
+[![Demo Video](youtube/ThumbnailB_small.jpg)](https://youtu.be/-bOfkFnc43Q)
+
 
 Refer to the video above, open the cloned folder with Antigravity, and use the prompt below to generate images.
 It works with any language supported by Gemini.
@@ -24,8 +30,6 @@ It works with any language supported by Gemini.
 > "ミッドトーン表現が豊かな高品質な日本のアニメイラスト風で、ガラスのボウルに入ったしっとりと濡れている果物をローアングルショットで描いて。逆光による表面下散乱の表現が必要。背景は単色にし、透明png生成ワークフローを適用して順次必要な画像を生成した後、透明pngに変換して。最終出力先はAntigravityプロジェクトのexamplesパスだよ"
 
 ---
-
-[![Fruit Bowl Composite](examples/fruit_bowl_composite.jpg)](examples/04_fruit_bowl_transparent.png)
 
 ## Tool Usage / 도구 사용법
 
