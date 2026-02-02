@@ -9,6 +9,8 @@ Two-pass alpha extraction tool for creating transparent PNG images.
 
 ---
 
+[Download Antigravity / 안티그래비티 다운로드 / Antigravity ダウンロード](https://antigravity.google/download)
+
 ## Usage / 사용법 / 使い方
 
 [![Demo Video](youtube/ThumbnailB_small.jpg)](https://youtu.be/-bOfkFnc43Q)
