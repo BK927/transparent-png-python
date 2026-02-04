@@ -1,15 +1,16 @@
 ---
-description: Create transparent PNG from AI-generated images using two-pass alpha extraction
+description: Create transparent PNG from AI-generated images (from prompt)
 ---
 
-# Two-Pass Alpha Extraction Workflow
+# Create Transparent PNG from Prompt Workflow
 
-This workflow creates transparent PNG images by generating the same subject on white and black backgrounds, then extracting the alpha channel.
+This workflow generates a new image from a text prompt and then converts it to a transparent PNG.
 
 ## Prerequisites
 
-- .NET 10 SDK installed
-- pngalpha project built (`d:\github\transparent-png\pngalpha`)
+- Python 3.10+ installed
+- uv installed
+- pngalpha installed (`uv tool install https://github.com/BK927/transparent-png-python.git`)
 
 ## Steps
 
@@ -49,8 +50,7 @@ Run the pngalpha tool to create the transparent PNG.
 
 // turbo
 ```bash
-cd d:\github\transparent-png\pngalpha
-dotnet run -- "<white_background_image_path>" "<black_background_image_path>" "<output_transparent_png_path>"
+pngalpha "<white_background_image_path>" "<black_background_image_path>" "<output_transparent_png_path>"
 ```
 
 ### 5. Verify Result
@@ -60,9 +60,3 @@ View the generated transparent PNG file to verify the alpha extraction worked co
 ```
 Use view_file tool on the output PNG path
 ```
-
-## Notes
-
-- The white and black background images must be pixel-aligned for best results
-- AI image generation may introduce slight variations; results depend on consistency
-- For production use, render the same 3D scene with different backgrounds for perfect alignment
