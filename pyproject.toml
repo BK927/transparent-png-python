@@ -1,0 +1,20 @@
+[project]
+name = "pngalpha"
+version = "0.1.0"
+description = "Two-pass alpha extraction tool for creating transparent PNG images"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=10.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+pngalpha = "pngalpha.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pngalpha"]

@@ -1,6 +1,3 @@
-[![Fruit Bowl Composite](examples/fruit_bowl_composite.jpg)](examples/04_fruit_bowl_transparent.png)
-
-
 # pngalpha
 
 Two-pass alpha extraction tool for creating transparent PNG images.
@@ -14,7 +11,6 @@ Two-pass alpha extraction tool for creating transparent PNG images.
 ## Usage / 사용법 / 使い方
 
 [![Demo Video](youtube/ThumbnailB_small.jpg)](https://youtu.be/-bOfkFnc43Q)
-
 
 Refer to the video above, open the cloned folder with Antigravity, and use the prompt below to generate images.
 It works with any language supported by Gemini.
@@ -33,6 +29,30 @@ It works with any language supported by Gemini.
 
 ---
 
+## Installation / 설치
+
+### Using uv (Recommended) / uv 사용 (권장)
+
+This project can be installed directly from GitHub using `uv tool`.
+
+이 프로젝트는 `uv tool`을 사용하여 GitHub에서 직접 설치할 수 있습니다.
+
+```bash
+uv tool install https://github.com/BK927/transparent-png-python.git
+```
+
+### Development / 개발
+
+To run from source:
+
+소스에서 직접 실행하려면:
+
+```bash
+uv sync
+```
+
+---
+
 ## Tool Usage / 도구 사용법
 
 ```bash
@@ -42,11 +62,11 @@ pngalpha <image_on_white> <image_on_black> <output_file>
 ### Example / 예시
 
 ```bash
-# Run with dotnet / dotnet으로 실행
-dotnet run -- white.png black.png output.png
+# General usage / 일반 사용
+pngalpha white.png black.png output.png
 
-# Or use compiled executable / 또는 컴파일된 실행 파일 사용
-pngalpha.exe white.png black.png output.png
+# Running from source with uv / uv로 소스 실행
+uv run pngalpha white.png black.png output.png
 ```
 
 ### Arguments / 인자
@@ -126,25 +146,11 @@ C_foreground = C_observed / alpha
 
 ---
 
-## Build / 빌드
-
-```bash
-# Debug build / 디버그 빌드
-dotnet build
-
-# Release build / 릴리스 빌드
-dotnet build -c Release
-
-# Self-contained executable / 독립 실행 파일
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
-```
-
----
-
 ## Requirements / 요구사항
 
-- .NET 10.0 SDK
-- SixLabors.ImageSharp 3.1.12
+- Python 3.10+
+- uv (for dependency management)
+- Pillow, NumPy
 
 ---
 
@@ -237,6 +243,16 @@ The `examples/` folder contains a complete workflow demonstration using a magic 
 ### Running the Example / 예시 실행
 
 ```bash
-cd pngalpha
-dotnet run -- examples/02_potion_white.png examples/03_potion_black.png examples/output.png
+# Using uv
+uv run pngalpha examples/02_potion_white.png examples/03_potion_black.png examples/output.png
 ```
+
+---
+
+## Credits / 크레딧
+
+This project is a Python port of the original C# project by [octopus7](https://github.com/octopus7/transparent-png).
+Special thanks for the excellent algorithm and documentation.
+
+이 프로젝트는 [octopus7](https://github.com/octopus7/transparent-png)의 원본 C# 프로젝트를 파이썬으로 포팅한 것입니다.
+훌륭한 알고리즘과 문서를 제공해주셔서 감사합니다.
