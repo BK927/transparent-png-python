@@ -55,6 +55,8 @@ uv sync
 
 ## Tool Usage / 도구 사용법
 
+### CLI
+
 ```bash
 pngalpha <image_on_white> <image_on_black> <output_file>
 ```
@@ -69,7 +71,25 @@ pngalpha white.png black.png output.png
 uv run pngalpha white.png black.png output.png
 ```
 
-### Arguments / 인자
+### GUI (Simple) / GUI (간단 버전)
+
+```bash
+# Installed tool / 설치형 실행
+pngalpha-gui
+
+# Running from source with uv / uv로 소스 실행
+uv run pngalpha-gui
+```
+
+Drag and drop the white-background image and black-background image into each box.
+As soon as both are set, conversion runs automatically.
+Output is saved automatically as `<white_image_name>_transparent.png` in the same folder.
+
+흰 배경 이미지와 검정 배경 이미지를 각 박스에 드래그앤드랍하면,
+두 이미지가 모두 설정되는 즉시 자동 변환됩니다.
+출력은 같은 폴더에 `<흰이미지파일명>_transparent.png`로 자동 저장됩니다.
+
+### Arguments / Inputs / 인자
 
 | Argument | Description | 설명 |
 |----------|-------------|------|
@@ -151,6 +171,7 @@ C_foreground = C_observed / alpha
 - Python 3.10+
 - uv (for dependency management)
 - Pillow, NumPy
+- tkinterdnd2 (for drag-and-drop GUI)
 
 ---
 
